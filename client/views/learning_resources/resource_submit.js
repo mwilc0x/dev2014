@@ -13,6 +13,6 @@ Template.resourceSubmit.events({
                 return alert(error.reason);
         });
 
-        Router.go('listPage');
+        Router.go('mainList');
     }
 });
