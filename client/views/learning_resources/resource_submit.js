@@ -11,8 +11,8 @@ Template.resourceSubmit.events({
         Meteor.call('resource', resource, function(error, id) {
             if (error)
                 return alert(error.reason);
-
-            Router.go('listPage', {_id: id});
         });
+
+        Router.go('listPage');
     }
 });
