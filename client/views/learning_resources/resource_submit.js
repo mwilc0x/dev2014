@@ -8,7 +8,11 @@ Template.resourceSubmit.events({
             message: $(e.target).find('[name=message]').val()
         }
 
-        resource._id = LearningResources.insert(resource);
-        Router.go('listPage', resource);
+        Meteor.call('resource', resource, function(error, id) {
+            if (error)
+                return alert(error.reason);
+
+            Router.go('listPage', {_id: id});
+        });
     }
 });
