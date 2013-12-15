@@ -6,6 +6,13 @@ LearningResources.allow({
     remove: ownsDocument
 });
 
+LearningResources.deny({
+    update: function(userId, post, fieldNames) {
+        // may only edit the following two fields:
+        return (_.without(fieldNames, 'url', 'title').length > 0);
+    }
+});
+
 // these methods are available to both server and client
 Meteor.methods({
     resource: function(resourceAttributes) {
