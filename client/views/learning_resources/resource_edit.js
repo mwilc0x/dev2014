@@ -14,7 +14,7 @@ Template.resourceEdit.events({
                 // display the error to the user
                 throwError(error.reason);
             } else {
-                Router.go('resourcePage', {_id: currentResourceId});
+                Router.go('listPage', {_id: currentResourceId});
             }
         });
     },

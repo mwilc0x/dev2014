@@ -19,7 +19,8 @@ if (LearningResources.find().count() === 0) {
         userId: sacha._id,
         author: sacha.profile.name,
         url: 'http://sachagreif.com/introducing-telescope/',
-        submitted: now - 7 * 3600 * 1000
+        submitted: now - 7 * 3600 * 1000,
+        commentsCount: 2
     });
 
     Comments.insert({
@@ -43,7 +44,8 @@ if (LearningResources.find().count() === 0) {
         userId: mike._id,
         author: mike.profile.name,
         url: 'http://meteor.com',
-        submitted: now - 10 * 3600 * 1000
+        submitted: now - 10 * 3600 * 1000,
+        commentsCount: 0
     });
 
     LearningResources.insert({
@@ -51,6 +53,7 @@ if (LearningResources.find().count() === 0) {
         userId: mike._id,
         author: mike.profile.name,
         url: 'http://themeteorbook.com',
-        submitted: now - 12 * 3600 * 1000
+        submitted: now - 12 * 3600 * 1000,
+        commentsCount: 0
     });
 }

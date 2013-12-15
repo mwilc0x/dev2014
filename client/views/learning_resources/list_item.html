@@ -3,7 +3,8 @@
         <div class="list-item-content">
             <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
             <p>
-                submitted by {{author}}
+                submitted by {{author}},
+                <a href="{{pathFor 'listPage'}}">{{commentsCount}} comments</a>
                 {{#if ownPost}}<a href="{{pathFor 'resourceEdit'}}">Edit</a>{{/if}}
             </p>
         </div>
