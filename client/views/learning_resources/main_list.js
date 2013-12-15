@@ -6,9 +6,9 @@ Template.mainList.helpers({
         return LearningResources.find();
     }
 });
-
 Template.mainList.helpers({
-    posts: function() {
-        return LearningResources.find({}, {sort: {submitted: -1}});
+    hasMorePosts: function(){
+        this.items.rewind();
+        return Router.current().limit() == this.items.fetch().length;
     }
 });
