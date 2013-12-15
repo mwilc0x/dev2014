@@ -35,11 +35,12 @@ Meteor.methods({
         }
 
         // pick out the whitelisted keys
-        var resource = _.extend(_.pick(resourceAttributes, 'url', 'message'), {
+        var resource = _.extend(_.pick(resourceAttributes, 'url', 'title', 'message'), {
             title: resourceAttributes.title + (this.isSimulation ? '(client)' : '(server)'),
             userId: user._id,
             author: user.username,
-            submitted: new Date().getTime()
+            submitted: new Date().getTime(),
+            commentsCount: 2
         });
 
         // wait for 5 seconds
