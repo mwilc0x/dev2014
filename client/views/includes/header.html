@@ -9,7 +9,7 @@
             <a class="brand" href="{{pathFor 'mainList'}}">dev2014 - socially compiled development learning resources for 2014</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
-                    <li><a href="{{pathFor 'resourceSubmit'}}">New</a></li>
+                    {{#if currentUser}}<li><a href="{{pathFor 'resourceSubmit'}}">Submit Resource</a></li>{{/if}}
                 </ul>
                 <ul class="nav pull-right">
                     <li>{{loginButtons}}</li>
