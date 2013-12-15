@@ -18,4 +18,10 @@ if (LearningResources.find().count() === 0) {
         author: 'Tom Coleman',
         url: 'http://themeteorbook.com'
     });
+
+    LearningResources.insert({
+        title: 'AngularJS',
+        author: 'Brad Green, Shyam Seshadri',
+        url: 'http://shop.oreilly.com/product/0636920028055.do'
+    });
 }
