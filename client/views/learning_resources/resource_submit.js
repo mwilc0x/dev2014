@@ -9,10 +9,14 @@ Template.resourceSubmit.events({
         }
 
         Meteor.call('resource', resource, function(error, id) {
-            if (error)
-                return alert(error.reason);
+            if (error) {
+                // display the error to the user
+                throwError(error.reason);
+                if (error.error === 302)
+                    Router.go('listPage', {_id: error.details})
+            } else {
+                Router.go('listPage', {_id: id});
+            }
         });
-
-        Router.go('mainList');
     }
 });
