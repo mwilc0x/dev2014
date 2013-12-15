@@ -1,6 +1,11 @@
 // eliminate using var to make LearningResources available to whole app
 LearningResources = new Meteor.Collection('learningResources');
 
+LearningResources.allow({
+    update: ownsDocument,
+    remove: ownsDocument
+});
+
 // these methods are available to both server and client
 Meteor.methods({
     resource: function(resourceAttributes) {
