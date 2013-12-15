@@ -3,6 +3,12 @@ Dev2014
 
 Collaborative development learning resource list using meteor.js
 
+# Demo
+
+``` bash
+http://dev2014.meteor.com/
+```
+
 # Running Locally
 
 ``` bash
