@@ -1,7 +1,7 @@
 Dev2014
 =======
 
-Collaborative development learning resouce list using meteor.js
+Collaborative development learning resource list using meteor.js
 
 # Running Locally
 
