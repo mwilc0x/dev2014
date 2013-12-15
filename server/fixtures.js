@@ -24,7 +24,7 @@ if (LearningResources.find().count() === 0) {
     });
 
     Comments.insert({
-        postId: telescopeId,
+        resourceId: telescopeId,
         userId: mike._id,
         author: mike.profile.name,
         submitted: now - 5 * 3600 * 1000,
@@ -32,7 +32,7 @@ if (LearningResources.find().count() === 0) {
     });
 
     Comments.insert({
-        postId: telescopeId,
+        resourceId: telescopeId,
         userId: sacha._id,
         author: sacha.profile.name,
         submitted: now - 3 * 3600 * 1000,
@@ -56,15 +56,4 @@ if (LearningResources.find().count() === 0) {
         submitted: now - 12 * 3600 * 1000,
         commentsCount: 0
     });
-
-    for (var i = 0; i < 10; i++) {
-        LearningResources.insert({
-            title: 'Test post #' + i,
-            author: sacha.profile.name,
-            userId: sacha._id,
-            url: 'http://google.com/?q=test-' + i,
-            submitted: now - i * 3600 * 1000,
-            commentsCount: 0
-        });
-    }
 }
